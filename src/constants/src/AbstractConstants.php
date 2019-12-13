@@ -33,6 +33,9 @@ abstract class AbstractConstants
 
         $message = ConstantsCollector::getValue($class, $code, $name);
 
+        $key = "constants.${message}";
+        $message = __($key);
+
         array_shift($arguments);
 
         if (count($arguments) > 0) {
